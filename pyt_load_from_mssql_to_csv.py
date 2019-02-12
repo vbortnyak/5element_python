@@ -4,6 +4,8 @@ import datetime
 import pymssql
 from decimal import Decimal
 
+
+
 db_shema = ""
 db_table = ""
 db_full_table = ""
@@ -15,7 +17,7 @@ Tquery = "Select schemas.name as db_shema, tables.name as db_table from sys.tabl
 conn = pymssql.connect(server="192.168.183.144:1433",
                        user="sa",
                        password="12qwasZX",
-                       database="DbWMS")
+                       database="TestDB")
 
 # Create cursor for get table.
 Tcursor = conn.cursor()
