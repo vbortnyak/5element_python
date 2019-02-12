@@ -39,14 +39,14 @@ for row in rows:
     query = "Select * from "+db_shema+"."+db_table
 # Execute query
     cursor.execute(query)
-    
+
     path_csv_file_rez = path_csv_file+db_shema+"."+db_table+".csv"
-    
+
     with open(path_csv_file_rez, 'w') as outfile:
         writer = csv.writer(outfile, delimiter=';', quoting=csv.QUOTE_NONE)
         for row in cursor:
              writer.writerow(row)
-    
+
 # Close the cursor and db_connection
     cursor.close()
 
